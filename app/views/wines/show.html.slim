@@ -1,1 +1,11 @@
-h1 SHOWING THE INDIVIDUAL WINE MORE DETAILS
+.row
+  = link_to "", wines_path, class: 'glyphicon glyphicon-chevron-left'
+
+.row
+  .col-xs-5
+    img src="http://placehold.it/400x550"
+  .col-xs-7
+    h1 = @wine.name
+    p = @wine.year
+    p = @wine.description
+    p.pull-right = @wine.price
