@@ -1,8 +1,13 @@
-- @wines.each do |wine|
-  .col-xs-4
-    img src="http://placehold.it/350x350"
-    .col-xs-6
-      h4 = wine.name
-      p = wine.price
-    .col-xs-6
-      = link_to "Details", wine_path(wine), class: 'btn btn-primary pull-right'
+.row
+  .col-xs-12
+    = link_to "Add new Wine", new_wine_path, class: 'btn btn-danger btn-block'
+
+.row
+  - @wines.each do |wine|
+    .col-xs-4.wine
+      img src="http://placehold.it/350x350"
+      .col-xs-6
+        h4 = wine.name
+        p = wine.price
+      .col-xs-6
+        = link_to "Details", wine_path(wine), class: 'btn btn-primary pull-right'
