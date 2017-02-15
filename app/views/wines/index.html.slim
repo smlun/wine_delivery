@@ -1,1 +1,8 @@
-h1 THIS SHOULD SHOW A WHOLE LIST OF WINES AVAILABLE
+- @wines.each do |wine|
+  .col-xs-4
+    img src="http://placehold.it/350x350"
+    .col-xs-6
+      h4.text = wine.name
+      p.text = wine.price
+    .col-xs-6
+      = link_to "Details", wine_path(wine), class: 'btn btn-primary pull-right'

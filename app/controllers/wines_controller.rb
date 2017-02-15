@@ -1,5 +1,6 @@
 class WinesController < ApplicationController
   def index
+    @wines = Wine.all
   end
 
   def create
@@ -12,6 +13,7 @@ class WinesController < ApplicationController
   end
 
   def show
+    @wines = Wine.all
   end
 
   def update
