@@ -1,2 +1,11 @@
-h1 Carts#index
-p Find me in app/views/carts/index.html.slim
+h1 Carts
+table.table.table-striped
+  thead
+    tr
+      th Name
+      th Address
+  tbody
+    - @carts.each do |cart|
+      tr
+        td = cart.name
+        td = cart.address
