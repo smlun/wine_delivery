@@ -11,7 +11,8 @@
     p.pull-right = @wine.price
   
   .col-xs-1.pull-right#order-form
-    =render 'orders/form'
+    - if user_signed_in?
+      =render 'orders/form'
 
 .row
   = link_to "DELETE", wine_path(@wine), method: :delete, data: { confirm: 'ARE YOU SURE?' }
