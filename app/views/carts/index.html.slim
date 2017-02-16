@@ -7,5 +7,5 @@ table.table.table-striped
   tbody
     - @carts.each do |cart|
       tr
-        td = cart.name
+        td = link_to cart.name, cart_path(cart)
         td = cart.address

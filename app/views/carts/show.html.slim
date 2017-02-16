@@ -1,2 +1,15 @@
-h1 Carts#show
-p Find me in app/views/carts/show.html.slim
+h1 Cart Details
+h2 = @cart.name
+p = @cart.address
+table.table.table-striped
+  thead
+    tr
+      th Wine
+      th Price
+      th Quantity
+  tbody
+    - @cart.orders.each do |order|
+      tr
+        td = order.wine.name
+        td = order.wine.price
+        td = order.quantity
