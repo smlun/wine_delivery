@@ -14,5 +14,8 @@ html
           = link_to 'Wines', wines_path, class: 'navbar-brand'
         ul.nav.navbar-nav
           li = link_to 'Carts', carts_path
-    .container
+    .container 
+      p.notice = notice
+      p.alert = alert
+      h3 = current_user.email
       = yield
