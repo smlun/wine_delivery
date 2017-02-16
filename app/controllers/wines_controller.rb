@@ -22,6 +22,7 @@ class WinesController < ApplicationController
 
   def show
     @wine = Wine.find(params[:id])
+    @order = Order.new
   end
 
   def update

@@ -1,0 +1,4 @@
+/ input.form-control value="1" type="number" min="1"
+= bootstrap_form_for [@wine, @order] do |f|
+  = f.number_field :quantity
+  = f.submit

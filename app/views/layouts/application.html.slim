@@ -12,5 +12,7 @@ html
       .container-fluid
         .navbar-header
           = link_to 'Wines', wines_path, class: 'navbar-brand'
+        ul.nav.navbar-nav
+          li = link_to 'Carts', carts_path
     .container
       = yield
