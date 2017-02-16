@@ -1,7 +1,12 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @carts = Cart.all
+    if current_user.admin?
+      @carts = Cart.all
+    else
+      redirect_to wines_path
+      flash[:notice] = "Sorry. You do not have permission to access that page."
+    end
   end
 
   def show
