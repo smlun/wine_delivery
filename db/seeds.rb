@@ -16,3 +16,7 @@ wines = Wine.create([
   {name: 'Rinke Langsurer Bruderberg Terrassen', year: 2014, description: 'The nose is redolent of flowers, mineral and apricots. A touch of cedary oak is detected on the palate with a vibrant acidity.
 ', price: 88.70}
 ])
+
+carts = Cart.create([
+  {name: 'John Watson', address:'221B Baker Street'}
+  ])
