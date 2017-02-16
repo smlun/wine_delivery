@@ -9,5 +9,8 @@ html
 
   body
     nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          = link_to 'Wines', wines_path, class: 'navbar-brand'
     .container
       = yield
