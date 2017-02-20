@@ -5,7 +5,11 @@
 .row
   - @wines.each do |wine|
     .col-xs-4.wine
-      img src="http://placehold.it/350x350"
+      img 
+        - if wine.wine_image_url == nil
+          img src="http://placehold.it/350x350"
+        - else
+          = wine.wine_image_url
       .col-xs-6
         h4 = wine.name
         p = wine.price

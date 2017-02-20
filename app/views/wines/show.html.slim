@@ -3,7 +3,10 @@
 
 .row
   .col-xs-5
-    img src="http://placehold.it/400x550"
+    - if @wine.wine_image_url == nil
+        img src="http://placehold.it/400x550"
+    - else
+      = image_tag @wine.wine_image_url
   .col-xs-7
     h1 = @wine.name
     p = @wine.year
